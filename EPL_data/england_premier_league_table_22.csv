@@ -1,4 +1,4 @@
-Rnk;Squad;MP;W;D;L;GF;GA;GD;Pts;"Pts;MP";xG;xGA;xGD;"xGD;90";Attendance;Top_Team_Scorer
+Rnk;Squad;MP;W;D;L;GF;GA;GD;Pts;pts_ma;xG;xGA;xGD;xGD_per_90;Attendance;Top_Team_Scorer
 1;Manchester City;38;29;6;3;99;26;73;93;2.45;89.0;27.2;+61.9;+1.63;52774;Kevin De Bruyne - 15
 2;Liverpool;38;28;8;2;94;26;68;92;2.42;89.2;34.3;+55.0;+1.45;53352;Mohamed Salah - 23
 3;Chelsea;38;21;11;6;76;33;43;74;1.95;67.2;36.0;+31.3;+0.82;36443;Mason Mount - 11
