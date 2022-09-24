@@ -1,10 +1,11 @@
 # EPL Season 2021-2022 Season Team Analysis
 Exploratory analysis done using postgreSQL and R is used for visualization
-
+![Epl](https://cdnuploads.aa.com.tr/uploads/Contents/2021/05/19/thumbs_b_c_5a5fb63e4f1788db0d57d0d2340a3b13.jpg?v=223210)
 ## Data Description
 Data includes a table of 8 which are available for download at [link]()
 The table include:
-- defensive stats
+
+- **defensive stats**
   - Squad: Team
   - NPl : Number of Players
   - TotTkl : Total tackles
@@ -30,7 +31,8 @@ The table include:
   - TklpInt : Tackles and interceptions
   - Clear: Clearances
   - Err : Errors
-- passing  stats
+
+- **passing  stats**
   - Squad: Team
   - NPl : Number of Players
   - 90s: MatchedPlayed in 90min
@@ -55,7 +57,8 @@ The table include:
   - PPA : Completed passes in the 18-yard box
   - CrsPA : Crosses pases
   - ProgPs : Progressive passes
-- possession stats
+
+**- possession stats**
   - Squad: Team
   - NPl : Number of Players
   - Poss : Team Possesion
@@ -82,7 +85,8 @@ The table include:
   - SucRec : Number of times a player successfully received a pass
   - RecRt : Percentage time of a player successfully received a pass
   - ProgRec : Progressive Pass received
-- shooting stats
+
+**- shooting stats**
   - Squad: Team
   - NPl : Number of Players
   - 90s: MatchedPlayed in 90min
@@ -103,7 +107,8 @@ The table include:
   - npxG/Sh : non-penalty expected goals per shot
   - GmxG : Goal minus expected goalsnp
   - GmxG : Non-penalty goals minus expected goals
-- the league table: the general league table
+
+**- the league table**
   - Rnk = League rank
   - Squad: Team
   - MP: Match Played
@@ -120,7 +125,8 @@ The table include:
   - xGD : Team Expected Goals Differences per 90 minutes
   - Attendance : Team Tota Attendances
   - Top Team Scorer: Team Scorer
-- teams general stats
+
+**- teams general stats**
   - Squad: Team
   - NPl : Number of Players
   - Age: Average Age
@@ -146,7 +152,8 @@ The table include:
   - xGpxAPer90 : (Expected goals + Expected assists) per 90 min
   - npxGPer90 : Non-penalty expected goals per 90 min
   - npxGxAPer90 : (Non-penalty expected goals+ expected assists) per 90 min
-- goalkeeping stats
+
+**- goalkeeping stats**
   - Squad: Team name
   - num_Pl: number of goalkeepers used in the season
   - MP: Match played
@@ -165,7 +172,8 @@ The table include:
   - PKsv: Penalty saved
   - PKm: Penalty missed
   - SavPenRt: Save penalty rate
-- goal shot creation stats
+
+**- goal shot creation stats**
   - Squad: Team
   - NPl : Number of Players
   - SCAT: Total Shot Creating Actions
@@ -184,7 +192,6 @@ The table include:
   - ShGCA: Shots that lead to another goal attempt
   - FldGCA: Foulds draw that lead a goal attempt
   - DefGCA: Defensive actions that lead to a goal attempt
-
 
 
 
