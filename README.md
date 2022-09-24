@@ -2,7 +2,7 @@
 Exploratory analysis done using postgreSQL and R is used for visualization
 ![Epl](https://cdnuploads.aa.com.tr/uploads/Contents/2021/05/19/thumbs_b_c_5a5fb63e4f1788db0d57d0d2340a3b13.jpg?v=223210)
 ## Data Description
-Data includes a table of 8 which are available for download at [link]()
+Data includes a table of 8 which are available for download at [link](https://github.com/xrander/EPL-2021-22-team-analysis/tree/master/EPL_data)
 The table include:
 
 - **defensive stats**
