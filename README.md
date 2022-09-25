@@ -6,41 +6,42 @@ Data includes a table of 8 which are available for download at [link](https://gi
 The table include:
 
 - **defensive stats**
-  - Squad: Team
-  - NPl : Number of Players
-  - TotTkl : Total tackles
+  - Squad: Team name
+  - NPl : Number of Players used in the season
+  - TotTkl : total number of players tackled
   - TotTklW : Tacleswon
   - Def3rdTck : Tackles in Defensive 3rd
   - Mid3rdTck : Tackles in Middle 3rd
   - Att3rdTck : Tackles in Attacking 3rd
-  - TklWvsDrib
-  - AttTckvsDrib
-  - TklWvsDribRt
-  - PastDribNTck
-  - PressTot : Total Pressures
-  - SuccPress : Successful Pressures
-  - PressRt : Successful Pressure Rate
-  - Def3rdPres : Pressures in Defensive 3rd
-  - Mid3rdPres: Pressures in Middle 3rd
-  - Att3rdPres: Pressures in Attacking 3rd
+  - TklWvsDrib: Number of dribblers tackled
+  - AttTckvsDrib: Number of times dribbled past plus number of tackles
+  - TklWvsDribRt: Rate of dribblers tackled. This is dribblers tackled divided by dribblers tackled plus times dribbled past. A minimum of 0.625 dribblers contested per squad game to qualify as a leader
+  - PastDribNTck: number of times dribbled past by an opposing player
+  - PressTot : number of times applying pressure to opposing players who is receiving, carrying or releasing the ball
+  - SuccPress : Successful win of possession after applying pressure within 5 seconds
+  - PressRt : percentage of time the squad gained possession within five seconds of applying pressure
+  - Def3rdPres : number of times applying pressure to opposing player who is receiving, carrying or releasing the ball in the defensive 3rd
+  - Mid3rdPres: umber of times applying pressure to opposing player who is receiving, carrying or releasing the ball in the Middle 3rd
+  - Att3rdPres: umber of times applying pressure to opposing player who is receiving, carrying or releasing the ball in the attacking 3rd
   - TotBlocBal : Number of times blocking a ball by standing in its path
   - ShBlocBall : Number of times blocking a shot by standing in its path
   - ShSvBloc : Number of times blocking a shot that was on target, by standing in its path
   - PassBlock :Number of times blocking a pass by standing in its path
-  - Int : Interceptions
-  - TklpInt : Tackles and interceptions
-  - Clear: Clearances
-  - Err : Errors
+  - Inte : Interceptions
+  - TklpInt : numbers of players tackled plus number of interceptions
+  - Clearance: Clearance
+  - Err : Mistakes leading to an opponent shot
 
 - **passing  stats**
-  - Squad: Team
-  - NPl : Number of Players
-  - 90s: MatchedPlayed in 90min
+  - Squad: Team name
+  - NPl : Number of Players used in the season
+  - _90s: Minutes Played per 90 minutes
   - CmpTot : Total completed passes
   - AttTot : Attempted passes
   - TotCmpRt : Passes Completion Percentage
-  - TotDist : Total distance passes
-  - PrgDist : Progressive distance passes
+  - TotDist : Total distance in yards, that completed passes have traveled in any direction
+  - PrgDist : Total distance in yards, that completed passes have traveled towards the opponent's goal
+  ==***nb***passes away from opponent's goal are counted as zero progressive yards==
   - CmpSh : Short completed passes
   - AttSh : Attempted short passes
   - CmpShRt : Short completed passes percentage
@@ -51,16 +52,17 @@ The table include:
   - AttLng : Attempted long passes
   - CmpLngRt : Long completed passes percentage
   - Ast : Total assists
-  - xA : Expected assistes
+  - xA : chances created leading to assists
+  - Amxa: Assist minus expected assist.
   - KP : Key passes ( Passes directly lead a shot)
-  - 1/3Pass : Completed passes the enter 1/3 of the pitch closest the goal
-  - PPA : Completed passes in the 18-yard box
-  - CrsPA : Crosses pases
-  - ProgPs : Progressive passes
+  - one_third_car : Completed passes that enter 1/3 of the pitch closest the goal excluding set pieces
+  - PPA : Completed passes in the 18-yard box not including set pieces
+  - CrsPA : completed crosses into the 18-yard box not including set peces
+  - ProgPs : completed pass into penalty area. Exclusing passes from the defending 40% of the pitch.
 
-**- possession stats**
-  - Squad: Team
-  - NPl : Number of Players
+- **Squad_Possession_stats**
+  - Squad: Team name
+  - NPl : Number of Players used in the season
   - Poss : Team Possesion
   - TotTouch : Total Touches
   - DefPenTouc : Touches in Defensive penalty area
@@ -71,12 +73,13 @@ The table include:
   - LiveTouc : Live-ball touches
   - SuccDrib : Successful dribbles
   - AttDrib : Dribbles attempted
-  - SuccDribRt : Minimum 5 dribbles per squad game
-  - Megs : Number of times a player dribbled the ball through opposition player's leg
+  - SuccDribRt : dribble success rate. Minimum 5 dribbles per squad game
+  - npdp: Numbers of players dribbled past
+  - Megs : Number of times a player dribbled the ball through opposition player's leg (nutmegs)
   - TotCarr : Number of times player controlled the ball with their feet
-  - TotDistCarr : Total distances, in yards, carries
-  - PrgDistCarr : Progressive distances carries
-  - ProgCarr : Progressive carries
+  - TotDistCarr : Total distances, in yards, a player moved the ball while controlling it with their feet, in any direction
+  - PrgDistCarr : Progressive distances Total distances, in yards, a player moved the ball while controlling it with their feet towards the opponents goal
+  - ProgCarr : carries that moves the ball towards the opponent's goal at least 5 yards, or nay carry into the penalty area.
   - 1/3Carr : Carries that enter the 1/3 of the pitch closest the goal
   - CPA : Carries into the 18 yard box
   - MisCarr : Number of times a player failed when attempting to gain to control a ball
@@ -86,29 +89,29 @@ The table include:
   - RecRt : Percentage time of a player successfully received a pass
   - ProgRec : Progressive Pass received
 
-**- shooting stats**
-  - Squad: Team
-  - NPl : Number of Players
-  - 90s: MatchedPlayed in 90min
-  - GlsTot : Team Goals
-  - TotSh : Team Total Shots
-  - TotShTg : Shots on Target
+- **Squad_shooting_stats**
+  - Squad: Team name
+  - NPl : Number of Players used in the season
+  - _90s: Matches Played in 90min
+  - GlsTot : Team Goals scored or allowed
+  - TotSh : Team Total Shots excluding penalties
+  - TotShTg : Shots on Target excluding penalties
   - SoTgRt : Shots on Target Conversion Rate
-  - Sh/90 : Shots per 90 minutes
-  - SoT/90: Shots on target per 90 min
-  - G/Sh :Goals per shot
-  - G/SoT : Goals per shot on target
+  - Sh_per_90 : Shots per 90 minutes
+  - SoT_90: Shots on target per 90 min
+  - G_per_Sh :Goals per shot
+  - G_per_SoT : Goals per shot on target
   - Dist: average distances, from goal of shot
-  - FK : free-kick
-  - PK : penalty kick made
-  - PKatt attempted penalty kick
+  - FK : shots from free-kick
+  - PK : penalty kicks made
+  - PKatt: attempted penalty kick
   - xG : expected goals
   - npxG : non-penalty expected goals
-  - npxG/Sh : non-penalty expected goals per shot
-  - GmxG : Goal minus expected goalsnp
-  - GmxG : Non-penalty goals minus expected goals
+  - npxG_per_Sh : non-penalty expected goals per shot
+  - GmxG : Goal minus expected goals
+  - np_GmxG : Non-penalty goals minus expected goals
 
-**- the league table**
+- **The_league_table**
   - Rnk = League rank
   - Squad: Team
   - MP: Match Played
@@ -119,17 +122,18 @@ The table include:
   - GA: Team Goal Conceded
   - GD: Team Goal Difference(Average)
   - Pts: Team Season Points
+  - pts_ma: Points per match
   - xG : Team Expected Goals
   - xGA: Team Expected Goals Allowed
   - xGD : Team Expected Goals Differences
-  - xGD : Team Expected Goals Differences per 90 minutes
+  - xGD_per_90 : Team Expected Goals Differences per 90 minutes
   - Attendance : Team Tota Attendances
   - Top Team Scorer: Team Scorer
 
-**- teams general stats**
-  - Squad: Team
-  - NPl : Number of Players
-  - Age: Average Age
+- **Squad_general_stats**
+  - Squad: Team nanme
+  - NPl : Number of Players used in the season
+  - Age: Average Age of squad weighted by minutes played
   - Poss: Team Average Possession
   - GlsTot: Team Goals
   - AstTot : Team Assists
@@ -153,27 +157,27 @@ The table include:
   - npxGPer90 : Non-penalty expected goals per 90 min
   - npxGxAPer90 : (Non-penalty expected goals+ expected assists) per 90 min
 
-**- goalkeeping stats**
+- **- Squad_goalkeeping_stats**
   - Squad: Team name
   - num_Pl: number of goalkeepers used in the season
   - MP: Match played
-  - GATot:Goals allowed
-  - GA90: Goals allowed per 90 minute
+  - GATot:Goals against total
+  - GA90: Goals against per 90 minute
   - SoTA: Shot on target against
   - Saves: Total saves
-  - SaveRt:
+  - SaveRt: save percentage
   - W: Win
   - D: Draw
   - L: Loss
-  - CS: 
-  - CSRt:
-  - PKatt: Attempted penalty
+  - CS: Clean sheets, playing a full match without the team conceding a goal
+  - CSRt: Clean sheet percentage
+  - PKatt: Attempted penalty kicks
   - PKA: Penalty allowed
   - PKsv: Penalty saved
   - PKm: Penalty missed
-  - SavPenRt: Save penalty rate
+  - SavPenRt: Save penalty percentage
 
-**- goal shot creation stats**
+- **- goal shot creation stats**
   - Squad: Team
   - NPl : Number of Players
   - SCAT: Total Shot Creating Actions
