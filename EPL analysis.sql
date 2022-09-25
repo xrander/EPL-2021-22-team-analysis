@@ -1,4 +1,5 @@
 -- Active: 1663635897256@@127.0.0.1@5432@project
+-- creating epl_league table
 CREATE TABLE epl_table_22 (
     Rnk SMALLINT,
     Squad VARCHAR(30) PRIMARY KEY,
@@ -11,7 +12,7 @@ CREATE TABLE epl_table_22 (
     GD SMALLINT,
     Pts SMALLINT,
     pts_MP NUMERIC(3,2),
-    xG SMALLINT,
+    xG NUMERIC(4,2),
     xGA NUMERIC(4,2),
     xGD NUMERIC(4,2) ,
     xGD_per_90 NUMERIC(4,2),
@@ -19,10 +20,12 @@ CREATE TABLE epl_table_22 (
     Top_Team_Scorer VARCHAR(40)
 );
 
+--importing data into table
 COPY epl_table_22
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_table_22.csv'
 WITH (FORMAT CSV, HEADER, DELIMITER ';');
 
+-- creating goalkeeping stat table
 CREATE TABLE goalkeeping_stats(
     Squad VARCHAR(30) PRIMARY KEY,
     num_pl SMALLINT,
@@ -44,12 +47,15 @@ CREATE TABLE goalkeeping_stats(
     SavPenRt NUMERIC(4,2)
 );
 
+--importing data into table
 COPY  goalkeeping_stats
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_squad_goalkeeping_22.csv'
 WITH (FORMAT CSV, HEADER; DELIMITER ';');
 
+
+--creating defensive stat table
 CREATE TABLE defence_stats(
-    Squad VARCHAR(30),
+    Squad VARCHAR(30) PRIMARY KEY,
     NPl SMALLINT,
     TotTkl SMALLINT,
     TotTklW SMALLINT,
@@ -76,12 +82,15 @@ CREATE TABLE defence_stats(
     Err SMALLINT
 );
 
+--importing data into table
 COPY defence_stats
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_squad_defensive_actions_22.csv'
 WITH (FORMAT CSV, HEADER, DELIMITER ';')
 
+
+--creating goal shot creation stat table
 CREATE TABLE goal_shot_creation_stats(
-    Squad VARCHAR(30),
+    Squad VARCHAR(30) PRIMARY KEY,
     NPl SMALLINT,
     SCAT SMALLINT,
     SCA90 NUMERIC(4,2),
@@ -101,14 +110,16 @@ CREATE TABLE goal_shot_creation_stats(
     DefGCA SMALLINT
 );
 
+--importing data into table
 COPY goal_shot_creation_stats
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_squad_goal_shot_creation_22.csv'
 WITH (FORMAT CSV, HEADER, DELIMITER ';')
 
+--creating passing statistics table
 CREATE TABLE passing_stats(
-    Squad VARCHAR(30),
+    Squad VARCHAR(30) PRIMARY KEY,
     NPl SMALLINT,
-    _90s SMALLINT,
+    _90s NUMERIC(4,2),
     CmpTot NUMERIC(7,2),
     AttTot NUMERIC(7,2),
     TotCmpRt NUMERIC(4,2),
@@ -119,7 +130,7 @@ CREATE TABLE passing_stats(
     CmpShRt NUMERIC(4,2),
     CmpMed SMALLINT,
     AttMed SMALLINT,
-    CmpMedRt SMALLINT,
+    CmpMedRt NUMERIC(4,2),
     CmpLng SMALLINT,
     AttLng SMALLINT,
     CmpLngRt NUMERIC(4,2),
@@ -133,12 +144,14 @@ CREATE TABLE passing_stats(
     ProgPs SMALLINT
 );
 
-COPY defensive_stats
+--importing data into table
+COPY passing_stats
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_squad_passing_stats_22.csv'
 WITH (FORMAT CSV, HEADER, DELIMITER ';')
 
+--creating possession statistics table
 CREATE TABLE possession_stats(
-    Squad VARCHAR(30),
+    Squad VARCHAR(30) PRIMARY KEY,
     NPl SMALLINT,
     Poss NUMERIC(4,2),
     TotTouc NUMERIC(7,2),
@@ -167,14 +180,16 @@ CREATE TABLE possession_stats(
     ProgRec SMALLINT
 );
 
+--importing data into table
 COPY possession_stats
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_squad_possession_22.csv'
 WITH (FORMAT CSV, HEADER, DELIMITER ';');
 
+--creating shooting statistics table
 CREATE TABLE shooting_stats(
-   Squad VARCHAR(30),
+   Squad VARCHAR(30) PRIMARY KEY,
    NPl SMALLINT,
-   _90s SMALLINT,
+   _90s NUMERIC(4,2),
    GlsTot SMALLINT,
    TotSh SMALLINT,
    TotShTg SMALLINT,
@@ -188,18 +203,20 @@ CREATE TABLE shooting_stats(
    PK SMALLINT,
    PKatt SMALLINT,
    xG NUMERIC(4,2),
-   npxG SMALLINT,
+   npxG NUMERIC(4,2),
    npxG_per_Sh NUMERIC(4,2),
    GmxG NUMERIC(4,2),
-   npGmxG SMALLINT
+   npGmxG NUMERIC(4,2)
 );
 
+--importing data into table
 COPY shooting_stats
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_squad_shooting_22.csv'
 WITH (FORMAT CSV, HEADER, DELIMITER ';');
 
+--creating miscellaneous league statistics table
 CREATE TABLE league_stats(
-Squad VARCHAR(30),
+Squad VARCHAR(30) PRIMARY KEY,
 NPl SMALLINT,
 Age NUMERIC(4,2),
 Poss NUMERIC(4,2),
@@ -217,7 +234,7 @@ GpAPer90 NUMERIC(4,2),
 GmPKPer90 NUMERIC(4,2),
 GpAmPKPer90 NUMERIC(5,2),
 xGTot NUMERIC(4,2),
-npxGTot SMALLINT,
+npxGTot NUMERIC(4,2),
 xATot NUMERIC(4,2),
 npxGpxA NUMERIC(5,2),
 xGPer90 NUMERIC(4,2),
@@ -227,6 +244,9 @@ npxGPer90 NUMERIC(4,2),
 npxGpxAPer90 NUMERIC(4,2)
 );
 
+--importing data into the table
 COPY league_stats
 FROM 'C:\Users\aduol\Downloads\SQL DATA SET\EPL-2021-22-team-analysis\EPL_data\england_premier_league_stats_22.csv'
 WITH (FORMAT CSV, HEADER, DELIMITER ';')
+
+
