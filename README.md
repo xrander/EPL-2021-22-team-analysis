@@ -1,5 +1,10 @@
 # EPL Season 2021-2022 Season Team Analysis
-Exploratory analysis done using postgreSQL and R is used for visualization
+Exploratory analysis of the 2021-2022 English Premier League.
+
+Tools used:
+![postgresql](https://github.com/xrander/Health-data/blob/master/Resource/4691328_postgresql_icon.png)
+![R](https://github.com/xrander/Health-data/blob/master/Resource/4375063_logo_project_r_icon.png)
+
 ![Epl](https://cdnuploads.aa.com.tr/uploads/Contents/2021/05/19/thumbs_b_c_5a5fb63e4f1788db0d57d0d2340a3b13.jpg?v=223210)
 ## Data Description
 Data includes a table of 8 which are available for download at [link](https://github.com/xrander/EPL-2021-22-team-analysis/tree/master/EPL_data)
